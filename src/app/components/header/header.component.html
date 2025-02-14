@@ -1,39 +1,44 @@
 <header class="bg-[#EE7037] text-white py-6 px-4 md:px-12">
   <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-
-    <div class="flex items-center space-x-6">
-      <img src="assets/logo.png" alt="TwentiesTribe Logo" class="h-10">
-      <nav class="hidden md:flex space-x-6">
-        <a href="#" class="hover:underline">The what?</a>
-        <a href="#" class="hover:underline">Mentors</a>
-        <a href="#" class="hover:underline">Events</a>
-        <a href="#" class="hover:underline">Coupons</a>
-        <a href="#" class="hover:underline">Courses</a>
-        <a href="#" class="hover:underline">Jobs</a>
-      </nav>
+    
+    <!-- Logo & Menu Toggle -->
+    <div class="flex items-center justify-between w-full md:w-auto">
+      <div class="flex items-center space-x-6">
+        <img src="assets/logo.png" alt="TwentiesTribe Logo" class="h-10">
+      </div>
+      <button id="menu-toggle" class="md:hidden text-white text-2xl">☰</button>
     </div>
 
+    <!-- Navigation Links -->
+    <nav id="mobile-menu" class="hidden md:flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
+      <a href="#" class="hover:underline">The what?</a>
+      <a href="#" class="hover:underline">Mentors</a>
+      <a href="#" class="hover:underline">Events</a>
+      <a href="#" class="hover:underline">Coupons</a>
+      <a href="#" class="hover:underline">Courses</a>
+      <a href="#" class="hover:underline">Jobs</a>
+    </nav>
 
-    <div class="flex items-center space-x-4">
-      <input type="text" placeholder="Search" class="px-4 py-2 rounded-md border text-gray-900">
+    <!-- Search & Buttons -->
+    <div class="flex items-center space-x-4 mt-4 md:mt-0">
+      <input type="text" placeholder="Search" class="px-4 py-2 rounded-md border text-gray-900 w-full md:w-auto">
       <button class="bg-white text-[#EE7037] px-4 py-2 rounded-md">Login</button>
-      <button class="bg-purple-600 px-4 py-2 rounded-md">Join The Tribe</button>
+      <button class="bg-purple-600 px-4 py-2 rounded-md">Tribe</button>
     </div>
 
   </div>
 </header>
 
-
+<!-- Hero Section -->
 <section class="bg-[#EE7037] text-white py-10 px-4 md:px-12">
-  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
     
-    <div>
+    <div class="mb-6 md:mb-0">
       <h1 class="text-3xl md:text-4xl font-bold">Explore all Coupons on</h1>
       <h2 class="text-4xl md:text-5xl font-bold">TwentiesTribe</h2>
     </div>
 
-
-    <div class="bg-black p-4 rounded-lg">
+    <div class="bg-black p-4 rounded-lg w-full md:w-auto">
       <p class="text-gray-400 uppercase text-sm">Promoted</p>
       <p class="text-lg font-semibold">UX Designer Intern at Google</p>
       <a href="#" class="text-blue-400 underline">Learn More →</a>
@@ -41,3 +46,9 @@
 
   </div>
 </section>
+
+<script>
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
