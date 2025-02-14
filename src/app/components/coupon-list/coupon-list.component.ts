@@ -36,6 +36,8 @@ export class CouponListComponent implements OnInit {
   minPrice: number = 1000;
   maxPrice: number = 500000;
 
+  priceRange: { min: number; max: number } = { min: 1000, max: 500000 };
+
   currentPage: number = 1;
   pageSize: number = 16;
   totalPages: number = 1;
