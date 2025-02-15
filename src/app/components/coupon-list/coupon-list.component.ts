@@ -17,7 +17,6 @@ export class CouponListComponent implements OnInit {
   searchQuery: string = '';
   sortOrder: string = 'newest';
   showFilters: boolean = false;
-
   categories: string[] = ['Tech', 'Fashion', 'Food', 'Health', 'Engineering'];
   discountRanges: string[] = [
     'Free',
